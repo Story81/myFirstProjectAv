@@ -4,7 +4,7 @@ public class Main3 {
 
     // Даны 3 стороны треугольника. Вывести на консоль какой это треугольник
     // - равносторонний, равнобедренный, разносторонний.
-    ..
+    //
     public static void main(String[] args) {
         int sideA = 2;
         int sideB = 7;
