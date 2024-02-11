@@ -39,7 +39,7 @@ public class Main_3 {
         //        4) *** По желанию. Вывести только те числа, которые содержат в себе символ 4.
         System.out.println("\nЗадача 4:");
         int[] arrayChars = {1, 2, 43, 4, 5, 6, 74, 8, 9, 104};
-        String[] arrayStr = new String[arrayChars.length];
+//        String[] arrayStr = new String[arrayChars.length];
         for (int i = 0; i <=arrayChars.length -1; i++) {
             String number = String.valueOf(arrayChars[i]);
             if (number.contains("4")) {
