@@ -1,5 +1,7 @@
 package lesson_7;
 
+import java.util.Scanner;
+
 public class Cat {
     private String name;
     private int age;
@@ -59,7 +61,12 @@ public class Cat {
         System.out.println("мяу мяу");
     }
 
-    public void feedCat(int amount) {
+    public void feedCat(int amountFeed) {
+        System.out.println("\n Введите количество корма для кота: ");
+
+        Scanner scan = new Scanner(System.in);
+        int amount = scan.nextInt();
+
         if (amount >= 10) {
             if (name != null) {
                 System.out.printf("Кот %s сытый\n", name);
@@ -67,7 +74,7 @@ public class Cat {
                 System.out.println("Кот сытый\n");
             }
         } else if (amount <0){
-                System.out.println("ай ай, кормите кота, а не балуйтесь");
+                System.out.println("Ай ай, кормите кота, а не балуйтесь");
         } else {
             if (name != null) {
                 System.out.printf("Кот %s все еще голодный\n", name);
