@@ -30,7 +30,7 @@ public class Rectangle extends Square {
         if (!super.equals(o)) return false;
 
         Rectangle rectangle = (Rectangle) o;
-
+        if (getSide1() != rectangle.getSide1()) return false;
         return side2 == rectangle.side2;
     }
 

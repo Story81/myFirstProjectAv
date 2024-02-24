@@ -8,6 +8,7 @@ public class Main {
         Triangle triangle2 = new Triangle("Треугольник",3,9,11);
         Square square = new Square("Квадрат", 4);
         Rectangle rectangle = new Rectangle("Прямоугольник", 3, 8);
+        Rectangle rectangle2 = new Rectangle("Прямоугольник", 3, 8);
 
 
         System.out.println("Дано: ");
@@ -23,6 +24,6 @@ public class Main {
         System.out.println("\nРавенства: ");
         System.out.println("triangle1 равен triangle2? - " +  triangle1.equals(triangle2));
         System.out.println("square равен triangle2? - " +  square.equals(triangle2));
-
+        System.out.println("rectangle равен rectangle2? - "+ rectangle.equals(rectangle2));
     }
 }
