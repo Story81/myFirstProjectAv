@@ -53,12 +53,10 @@ public class Main {
         char[] result = new char[qwert.length + asdfg.length];
         for (int i = 0; i < qwert.length; i++) {
             result[i]= qwert[i];
-       }
+        }
         for (int i = 0; i < asdfg.length; i++) {
             result[i+qwert.length]= asdfg[i];
-                    }
+        }
         System.out.println(result);
     }
 }
-
-

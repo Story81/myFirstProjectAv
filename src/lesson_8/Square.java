@@ -1,5 +1,7 @@
 package lesson_8;
 
+import java.util.Objects;
+
 public class Square extends Figure{
    private int side1;
 
@@ -26,15 +28,13 @@ public class Square extends Figure{
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         Square square = (Square) o;
-
         return side1 == square.side1;
     }
 
     @Override
     public int hashCode() {
-        return side1;
+        return Objects.hash(side1);
     }
 
     @Override

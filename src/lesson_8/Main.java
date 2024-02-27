@@ -21,6 +21,7 @@ public class Main {
         square.perimeter();
         rectangle.perimeter();
 
+
         System.out.println("\nРавенства: ");
         System.out.println("triangle1 равен triangle2? - " +  triangle1.equals(triangle2));
         System.out.println("square равен triangle2? - " +  square.equals(triangle2));
