@@ -7,7 +7,7 @@ public class Main {
 
         try {
             String number1 = "25";
-            String number2 = null;
+            String number2 = "вава";
             System.out.println("1. Результат вычисления: ");
             System.out.println(stringUtilsImp.div(number1, number2)); }
         catch (ArithmeticException | NullPointerException | NumberFormatException e){
@@ -20,7 +20,7 @@ public class Main {
 
             String word = "код";
             int[] arr = stringUtilsImp.findWord(text, word);
-            System.out.print("2. Индексы вхождений слова " + word + " : ");
+            System.out.print("2. Индексы вхождения слова " + word + " : ");
             for (int i : arr) {
                 System.out.print(i + ", ");
             }

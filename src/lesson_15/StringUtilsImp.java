@@ -27,26 +27,26 @@ public class StringUtilsImp implements StringUtils {
     }
 
 
-    @Override
-    public int[] findWord(String text, String word) throws NullPointerException {
-        if (text == null || word == null) {
-            throw new NullPointerException("один из вводимых параметров (слово или текст) null");
-        }
-        ArrayList<Integer> indexList = new ArrayList<>();
-        String[] words = text.split(" ");
-
-        for (int j = 0; j < words.length; j++) {
-            if (words[j].equalsIgnoreCase(word)) {
-                indexList.add(j);
-            }
-        }
-
-        int[] indexListArray = new int[indexList.size()];
-        for (int i = 0; i < indexListArray.length; i++) {
-            indexListArray[i] = indexList.get(i);
-        }
-        return indexListArray;
-    }
+//    @Override
+//    public int[] findWord(String text, String word) throws NullPointerException {
+//        if (text == null || word == null) {
+//            throw new NullPointerException("один из вводимых параметров (слово или текст) null");
+//        }
+//        ArrayList<Integer> indexList = new ArrayList<>();
+//        String[] words = text.split(" ");
+//
+//        for (int j = 0; j < words.length; j++) {
+//            if (words[j].equalsIgnoreCase(word)) {
+//                indexList.add(j);
+//            }
+//        }
+//
+//        int[] indexListArray = new int[indexList.size()];
+//        for (int i = 0; i < indexListArray.length; i++) {
+//            indexListArray[i] = indexList.get(i);
+//        }
+//        return indexListArray;
+//    }
 
 
     @Override
@@ -68,5 +68,29 @@ public class StringUtilsImp implements StringUtils {
             throw new CustomException("Ошибка: чисел в строке не обнаружено");
         }
         return numbersArr;
+    }
+
+    @Override
+    public int[] findWord(String text, String word) throws NullPointerException {
+        if (text == null || word == null) {
+            throw new NullPointerException("один из вводимых параметров (слово или текст) null");
+        }
+        ArrayList<Integer> indexList = new ArrayList<>();
+
+        String[] words = text.split(" ");
+        int count = 0;
+
+        for (int j = 0; j < words.length; j++) {
+            count = count + words[j].length() + 1;
+            if (words[j].equalsIgnoreCase(word)) {
+                int a = count-words[j].length() - 1;
+                indexList.add(a);
+            }
+        }
+        int[] indexListArray = new int[indexList.size()];
+        for (int i = 0; i < indexListArray.length; i++) {
+            indexListArray[i] = indexList.get(i);
+        }
+        return indexListArray;
     }
 }
