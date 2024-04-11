@@ -40,13 +40,13 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", age=" + age +
-                ", averegeRate=" + averegeRate +
-                ", course=" + course +
-                '}';
+        return " студент (" +
+                "имя= '" + name + '\'' +
+                ", фамилия='" + surname + '\'' +
+                ", возраст =" + age +
+                ", ср.оценка =" + averegeRate +
+                ", курс =" + course +
+                ')';
     }
 
     @Override
